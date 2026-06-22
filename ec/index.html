@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>インスタントウィン キャンペーンBOX | ECサイト向けキャンペーンソリューション</title>
+<meta name="description" content="シリアルナンバー認証でその場で当落がわかるインスタントウィン。ECサイトの開封率・クリック率を従来の2〜3倍に、カゴ落ち・休眠顧客を効果的に掘り起こします。初回1,000シリアル無料・即日導入可能。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-dark:   #6B1A2E;
+    --green-mid:    #97233F;
+    --green-base:   #C2274F;
+    --green-light:  #F2879B;
+    --green-pale:   #F7B8C5;
+    --green-bg:     #FDECEF;
+    --green-border: #F7C3CD;
+    --amber-bg:     #FFF6E0;
+    --amber-text:   #8A5B00;
+    --amber-border: #F3CD78;
+    --text-primary: #1a1a1a;
+    --text-secondary: #5f6368;
+    --text-muted:   #9aa0a6;
+    --bg-page:      #fbf8f8;
+    --bg-card:      #ffffff;
+    --bg-surface:   #f4f1f1;
+    --border:       rgba(0,0,0,0.1);
+    --border-light: rgba(0,0,0,0.07);
+    --radius-sm:    8px;
+    --radius-md:    12px;
+    --radius-lg:    16px;
+    --radius-xl:    24px;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-page);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── LAYOUT ── */
+  .lp { max-width: 960px; margin: 0 auto; padding: 0 0 5rem; }
+  .section { padding: 4.5rem 2.5rem; }
+  .divider { height: 1px; background: var(--border-light); margin: 0 2.5rem; }
+
+  .sl {
+    font-size: 10px;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--green-base);
+    font-weight: 500;
+    margin-bottom: .5rem;
+  }
+  .section h2 {
+    font-size: 1.9rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: .75rem;
+  }
+  .lead {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+    max-width: 660px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--green-dark);
+    color: #fff;
+    padding: 6rem 2.5rem 5rem;
+    text-align: center;
+    border-radius: 0 0 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    background: rgba(194,39,79,.18);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -120px; left: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(247,184,197,.1);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(247,184,197,.2);
+    border: 1px solid rgba(247,184,197,.4);
+    color: var(--green-pale);
+    font-size: 11px;
+    padding: 4px 18px;
+    border-radius: 20px;
+    letter-spacing: .1em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    position: relative; z-index: 1;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.18;
+    margin-bottom: 1.25rem;
+    color: #fff;
+    position: relative; z-index: 1;
+  }
+  .hero h1 em { font-style: normal; color: var(--green-light); }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,.75);
+    max-width: 580px;
+    margin: 0 auto 1rem;
+    line-height: 1.85;
+    position: relative; z-index: 1;
+  }
+  .hero-proof {
+    font-size: 13px;
+    color: rgba(255,255,255,.45);
+    margin-bottom: 2.75rem;
+    position: relative; z-index: 1;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative; z-index: 1;
+  }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: #fff; color: var(--green-dark);
+    font-weight: 500; font-size: 15px;
+    padding: 14px 30px; border-radius: 50px;
+    border: none; cursor: pointer; text-decoration: none;
+    font-family: inherit;
+    transition: opacity .15s;
+  }
+  .btn-white:hover { opacity: .88; }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: transparent; color: #fff;
+    font-weight: 500; font-size: 15px;
+    padding: 13px 30px; border-radius: 50px;
+    border: 1.5px solid rgba(255,255,255,.4);
+    cursor: pointer; text-decoration: none;
+    font-family: inherit;
+    transition: border-color .15s;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,.7); }
+  .hero-note {
+    font-size: 12px;
+    color: rgba(255,255,255,.4);
+    margin-top: 1.25rem;
+    position: relative; z-index: 1;
+  }
+
+  /* ── PAIN ── */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    gap: .875rem;
+  }
+  .pain-card {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.5rem;
+    border: 1px solid var(--border-light);
+  }
+  .pain-num { font-size: 10px; color: var(--green-base); font-weight: 500; letter-spacing: .08em; margin-bottom: .5rem; }
+  .pain-card h3 { font-size: 15px; font-weight: 500; margin-bottom: .45rem; }
+  .pain-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .solution-banner {
+    background: var(--green-bg);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.75rem;
+    margin-top: 1.75rem;
+    display: flex; align-items: center; gap: .875rem;
+    border: 1px solid var(--green-border);
+  }
+  .solution-banner .ti { font-size: 22px; color: var(--green-mid); flex-shrink: 0; }
+  .solution-banner p { font-size: 14px; color: var(--green-dark); line-height: 1.65; font-weight: 500; }
+
+  /* ── STATS ── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .875rem;
+    margin-top: 1.75rem;
+  }
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.4rem 1.25rem;
+    text-align: center;
+  }
+  .stat-card .stat-num { font-size: 1.5rem; font-weight: 500; color: var(--green-base); margin-bottom: .3rem; }
+  .stat-card .stat-label { font-size: 12px; color: var(--text-secondary); }
+
+  /* ── OVERVIEW ── */
+  .overview-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .ov-card {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border-light);
+  }
+  .ov-icon { font-size: 28px; color: var(--green-base); margin-bottom: .875rem; }
+  .ov-card h3 { font-size: 15px; font-weight: 500; margin-bottom: .5rem; }
+  .ov-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+  .feat-3col {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .feat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .feat-icon { font-size: 20px; color: var(--green-base); margin-bottom: .75rem; }
+  .feat-card h3 { font-size: 15px; font-weight: 500; margin-bottom: .5rem; }
+  .feat-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
+
+  /* ── 3 STEPS ── */
+  .flow-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .875rem;
+  }
+  .flow-steps.four { grid-template-columns: repeat(4, 1fr); }
+  .fstep {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.25rem;
+    border: 1px solid var(--border-light);
+  }
+  .fstep-n {
+    width: 32px; height: 32px;
+    border-radius: 50%; background: var(--green-base); color: #fff;
+    font-size: 13px; font-weight: 500;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 0 .875rem;
+  }
+  .fstep h4 { font-size: 14px; font-weight: 500; margin-bottom: .45rem; }
+  .fstep p { font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
+  .fstep-support { margin-top: 1.25rem; font-size: 13px; color: var(--text-secondary); text-align: center; }
+  .fstep-support a { color: var(--green-base); text-decoration: none; }
+
+  /* ── COMPARISON TABLE ── */
+  .cmp-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    font-size: 13px;
+  }
+  .cmp-table th, .cmp-table td {
+    padding: 1rem 1.1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+  }
+  .cmp-table th { background: var(--bg-surface); font-weight: 500; font-size: 12.5px; }
+  .cmp-table tr:last-child td { border-bottom: none; }
+  .cmp-table td.label { font-weight: 500; color: var(--text-primary); white-space: nowrap; }
+  .cmp-table td.win { background: var(--green-bg); color: var(--green-dark); }
+  .cmp-table th.win-col { background: var(--green-base); color: #fff; }
+  .cmp-banner {
+    background: var(--green-dark);
+    border-radius: var(--radius-md);
+    padding: 1.5rem 1.75rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  .cmp-banner .big { font-size: 1.8rem; font-weight: 500; color: var(--green-pale); }
+  .cmp-banner p { font-size: 14px; margin-top: .4rem; color: rgba(255,255,255,.85); }
+
+  /* ── CASES ── */
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .case-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+  .case-type { font-size: 10px; color: var(--green-base); font-weight: 500; letter-spacing: .08em; margin-bottom: .6rem; }
+  .case-card h3 { font-size: 15px; font-weight: 500; margin-bottom: .8rem; }
+  .case-metric { display: flex; align-items: baseline; gap: .5rem; margin-bottom: .6rem; }
+  .case-metric .num { font-size: 1.5rem; font-weight: 500; color: var(--green-base); }
+  .case-metric .lbl { font-size: 12px; color: var(--text-secondary); }
+  .case-card p { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+  .case-quote {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    margin-top: 1.25rem;
+  }
+  .case-quote p { font-size: 14px; color: var(--text-secondary); line-height: 1.85; font-style: italic; margin-bottom: .875rem; }
+  .case-quote .who { font-size: 13px; color: var(--text-primary); font-weight: 500; font-style: normal; }
+  .case-timeline {
+    background: var(--green-bg);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.75rem;
+    margin-top: 1.25rem;
+    display: flex; align-items: center; gap: .875rem;
+    border: 1px solid var(--green-border);
+  }
+  .case-timeline .ti { font-size: 22px; color: var(--green-mid); flex-shrink: 0; }
+  .case-timeline p { font-size: 14px; color: var(--green-dark); line-height: 1.65; font-weight: 500; }
+
+  /* ── PRICING ── */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .pr-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    background: var(--bg-card);
+  }
+  .pr-card.recommended { border: 2px solid var(--green-base); position: relative; }
+  .pr-rec-badge {
+    position: absolute;
+    top: -11px; left: 50%; transform: translateX(-50%);
+    background: var(--green-base); color: #fff;
+    font-size: 11px; padding: 2px 16px; border-radius: 20px;
+    white-space: nowrap;
+  }
+  .pr-plan { font-size: 10px; color: var(--green-base); font-weight: 500; letter-spacing: .08em; margin-bottom: .5rem; }
+  .pr-card h3 { font-size: 15px; font-weight: 500; margin-bottom: .25rem; }
+  .pr-scene { font-size: 12px; color: var(--text-muted); margin-bottom: .875rem; }
+  .pr-price { font-size: 1.75rem; font-weight: 500; line-height: 1; margin-bottom: .2rem; }
+  .pr-price span { font-size: 14px; color: var(--text-secondary); font-weight: 400; }
+  .pr-sub { font-size: 12px; color: var(--text-secondary); margin-bottom: 1rem; }
+  .pr-items { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+  .pr-items li {
+    font-size: 13px; color: var(--text-secondary);
+    display: flex; align-items: flex-start; gap: .4rem; line-height: 1.5;
+  }
+  .pr-items li .ti { color: var(--green-base); font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+  .pr-free {
+    background: var(--green-bg);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    display: flex; align-items: flex-start; gap: .875rem;
+  }
+  .pr-free .ti { font-size: 22px; color: var(--green-mid); flex-shrink: 0; margin-top: 1px; }
+  .pr-free p { font-size: 13px; color: var(--green-dark); line-height: 1.65; }
+  .pr-free strong { font-weight: 500; }
+
+  /* ── SUPPORT ── */
+  .support-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  .support-card {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid var(--border-light);
+  }
+  .support-card .ti { font-size: 24px; color: var(--green-base); margin-bottom: .75rem; }
+  .support-card h4 { font-size: 14px; font-weight: 500; margin-bottom: .5rem; }
+  .support-card p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── FORM ── */
+  .form-wrap {
+    background: var(--bg-surface);
+    border-radius: var(--radius-xl);
+    padding: 2.75rem;
+    border: 1px solid var(--border-light);
+  }
+  .form-wrap h3 { font-size: 1.2rem; font-weight: 500; margin-bottom: .4rem; }
+  .form-sub { font-size: 14px; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.65; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .875rem; }
+  .form-group { display: flex; flex-direction: column; gap: .35rem; }
+  .form-group.full { grid-column: 1 / -1; }
+  .form-group label {
+    font-size: 13px; font-weight: 500; color: var(--text-secondary);
+    display: flex; align-items: center; gap: .35rem;
+  }
+  .req {
+    font-size: 10px; background: var(--green-bg); color: var(--green-mid);
+    padding: 1px 6px; border-radius: 3px; font-weight: 400;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%; padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    font-size: 14px; font-family: inherit;
+    color: var(--text-primary); outline: none;
+    transition: border-color .15s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--green-base); }
+  .form-group textarea { resize: vertical; min-height: 100px; }
+  .check-row { display: flex; flex-direction: column; gap: .55rem; }
+  .check-item { display: flex; align-items: center; gap: .5rem; font-size: 14px; cursor: pointer; }
+  .check-item input { width: 16px; height: 16px; cursor: pointer; accent-color: var(--green-base); }
+  .form-submit {
+    width: 100%; background: var(--green-base); color: #fff;
+    font-size: 15px; font-weight: 500; padding: 14px 0;
+    border-radius: 50px; border: none; cursor: pointer;
+    margin-top: 1.5rem;
+    display: flex; align-items: center; justify-content: center; gap: .6rem;
+    font-family: inherit;
+    transition: background .15s;
+  }
+  .form-submit:hover { background: var(--green-mid); }
+  .form-note { font-size: 12px; color: var(--text-muted); text-align: center; margin-top: .875rem; line-height: 1.65; }
+  .success-msg {
+    display: none;
+    background: var(--green-bg);
+    border-radius: var(--radius-lg);
+    padding: 2.75rem; text-align: center;
+  }
+  .success-msg .ti { font-size: 40px; color: var(--green-base); margin-bottom: 1rem; }
+  .success-msg h4 { font-size: 17px; font-weight: 500; margin-bottom: .6rem; color: var(--green-dark); }
+  .success-msg p { font-size: 14px; color: var(--green-mid); line-height: 1.8; }
+
+  /* ── FINAL CTA ── */
+  .cta-block {
+    background: var(--green-dark);
+    border-radius: var(--radius-xl);
+    padding: 4rem 2.5rem;
+    text-align: center; color: #fff;
+  }
+  .cta-label {
+    font-size: 10px; letter-spacing: .15em; text-transform: uppercase;
+    color: var(--green-light); margin-bottom: 1rem;
+  }
+  .cta-block h2 { font-size: 2rem; font-weight: 500; color: #fff; margin-bottom: .875rem; line-height: 1.25; }
+  .cta-block > p { font-size: 1rem; color: rgba(255,255,255,.72); margin-bottom: 2.5rem; line-height: 1.85; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .cta-items {
+    display: flex; gap: 2.5rem; justify-content: center;
+    flex-wrap: wrap; margin-bottom: 2.5rem;
+  }
+  .cta-item { text-align: center; }
+  .cta-item .ti { font-size: 24px; color: var(--green-light); margin-bottom: .4rem; }
+  .cta-item strong { color: #fff; font-weight: 500; display: block; font-size: 14px; margin-bottom: .2rem; }
+  .cta-item p { font-size: 12px; color: rgba(255,255,255,.6); line-height: 1.55; }
+  .cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.75rem; }
+  .cta-contact { font-size: 13px; color: rgba(255,255,255,.4); }
+  .cta-contact a { color: rgba(255,255,255,.65); text-decoration: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 720px) {
+    .hero h1 { font-size: 2rem; }
+    .section h2 { font-size: 1.5rem; }
+    .overview-3col,
+    .feat-3col,
+    .flow-steps,
+    .flow-steps.four,
+    .case-grid,
+    .support-grid,
+    .stat-grid,
+    .pricing-grid { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: 1; }
+    .cta-items { gap: 1.5rem; }
+    .section { padding: 3rem 1.25rem; }
+    .divider { margin: 0 1.25rem; }
+    .cmp-table { font-size: 12px; }
+    .cmp-table th, .cmp-table td { padding: .7rem .6rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="lp">
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <div class="hero-badge">Instant Win Campaign BOX — For EC Sites</div>
+    <h1>お客様のECサイトの売上と集客を<br>劇的に向上させる<em>キャンペーンソリューション</em></h1>
+    <p class="hero-sub">開封率・クリック率が従来の2〜3倍に。カゴ落ち・休眠客を効果的に掘り起こす、ECサイト向けインスタントウィンキャンペーンです。</p>
+    <p class="hero-proof">初回1,000シリアル無料 ・ 即日導入可能</p>
+    <div class="hero-btns">
+      <a class="btn-white" href="#request-form">
+        <i class="ti ti-file-description"></i> 資料請求・お問い合わせ
+      </a>
+      <a class="btn-ghost" href="#free-trial">
+        <i class="ti ti-gift"></i> 初回1,000シリアル無料で試す
+      </a>
+    </div>
+    <div class="hero-note">クレジットカード不要 · 最短即日スタート · 専任スタッフがサポート</div>
+  </div>
+
+  <!-- ===== ISSUES ===== -->
+  <div class="section">
+    <div class="sl">01 / EC事業者が抱える課題</div>
+    <h2>ECサイト運営者の、<br>こんな課題に心当たりはありませんか？</h2>
+    <p class="lead">従来の手法では解決できない課題に、新しいアプローチが求められています。</p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-num">ISSUE 01</div>
+        <h3>売上・リピーターの伸び悩み</h3>
+        <p>初回購入後の再訪率が低く、顧客単価・LTVが伸びない。競合サイトとの価格競争に陥りやすい状況です。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">ISSUE 02</div>
+        <h3>メルマガ・ポイント施策の限界</h3>
+        <p>開封率10〜20%、クリック率1〜5%と効果減少。ポイント施策も慣れによる訴求力低下が課題です。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">ISSUE 03</div>
+        <h3>カゴ落ち・休眠顧客問題</h3>
+        <p>カゴ落ち率70%超、6ヶ月以上の非アクティブ顧客が増加。効果的な再訪施策が確立できていません。</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">ISSUE 04</div>
+        <h3>差別化の難しさ</h3>
+        <p>同質化した割引やセール、ポイント施策では競合との差別化が困難。顧客の心に響く独自体験が必要です。</p>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-num">↑</div><div class="stat-label">顧客獲得コスト<br>年々上昇</div></div>
+      <div class="stat-card"><div class="stat-num">↓</div><div class="stat-label">メルマガ開封率<br>年々低下</div></div>
+      <div class="stat-card"><div class="stat-num">→</div><div class="stat-label">リピート購入率<br>横ばい</div></div>
+      <div class="stat-card"><div class="stat-num">↑</div><div class="stat-label">休眠顧客の割合<br>増加中</div></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:.6rem">※EC業界調査データ(2023年)</p>
+    <div class="solution-banner">
+      <i class="ti ti-bulb"></i>
+      <p>従来の手法では解決できない課題に、新しいアプローチが求められています。</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== SERVICE OVERVIEW ===== -->
+  <div class="section">
+    <div class="sl">02 / Service Overview</div>
+    <h2>インスタントウィン<br>キャンペーンBOXとは</h2>
+    <p class="lead">ECサイト特有の課題を解決する、ゲーム性と即効性を兼ね備えた次世代プロモーションツールです。</p>
+    <div class="overview-3col">
+      <div class="ov-card">
+        <div class="ov-icon"><i class="ti ti-device-mobile"></i></div>
+        <h3>Webから簡単応募</h3>
+        <p>スマホやパソコンから簡単アクセス。複雑な登録不要で、その場で当落結果がすぐわかるシンプルな仕組みです。</p>
+      </div>
+      <div class="ov-card">
+        <div class="ov-icon"><i class="ti ti-barcode"></i></div>
+        <h3>シリアルナンバー認証</h3>
+        <p>購入証明となるシリアルナンバーを入力するだけで、即時に抽選結果を表示。不正応募防止にも効果的です。</p>
+      </div>
+      <div class="ov-card">
+        <div class="ov-icon"><i class="ti ti-ticket"></i></div>
+        <h3>クーポン・参加賞機能</h3>
+        <p>はずれても参加賞やクーポンを付与可能。次回購入への導線を作り、顧客満足度とリピート率を向上させます。</p>
+      </div>
+    </div>
+    <div class="feat-card" style="margin-bottom:1.5rem">
+      <div class="feat-icon"><i class="ti ti-chart-dots-3"></i></div>
+      <h3>EC特化型分析機能</h3>
+      <p>応募データを分析し、効果測定が可能。顧客行動の把握や次回キャンペーンの改善につながります。</p>
+    </div>
+    <h3 style="font-size:16px;font-weight:500;margin-bottom:1rem">簡単3ステップの仕組み</h3>
+    <div class="flow-steps">
+      <div class="fstep">
+        <div class="fstep-n">1</div>
+        <h4>シリアル発行・設定</h4>
+        <p>管理画面から簡単にキャンペーン設定と当選確率を調整できます。</p>
+      </div>
+      <div class="fstep">
+        <div class="fstep-n">2</div>
+        <h4>顧客がシリアル入力</h4>
+        <p>QRコードやURLから専用ページにアクセスしシリアル番号を入力。</p>
+      </div>
+      <div class="fstep">
+        <div class="fstep-n">3</div>
+        <h4>その場で当落判定</h4>
+        <p>即時に結果表示・SNS連携で拡散効果も期待できます。</p>
+      </div>
+    </div>
+    <div class="cmp-banner">
+      <div class="big">平均CV率 1.5〜3倍 向上！</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== COMPARISON ===== -->
+  <div class="section">
+    <div class="sl">03 / Comparison</div>
+    <h2>従来手法との効果比較</h2>
+    <p class="lead">従来施策と比較して2〜3倍の反応率を実現できます。</p>
+    <table class="cmp-table">
+      <tr>
+        <th>項目</th>
+        <th>メールマガジン施策</th>
+        <th class="win-col">インスタントウィン</th>
+      </tr>
+      <tr>
+        <td class="label">開封率</td>
+        <td>10〜20%</td>
+        <td class="win">30%以上（QR/LP送付で開封率向上）</td>
+      </tr>
+      <tr>
+        <td class="label">クリック率</td>
+        <td>1〜5%</td>
+        <td class="win">10〜30%（「その場で当たる」興味喚起効果）</td>
+      </tr>
+      <tr>
+        <td class="label">購入誘導</td>
+        <td>情報提供中心</td>
+        <td class="win">クーポン・参加賞で即購入誘導</td>
+      </tr>
+      <tr>
+        <td class="label">ユーザー体験</td>
+        <td>一方通行型コミュニケーション</td>
+        <td class="win">ゲーム性のある双方向体験</td>
+      </tr>
+    </table>
+    <div class="benefit-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem">
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-trending-up"></i></div>
+        <h3>ROI・購入転換率が大幅アップ！</h3>
+        <p>即時購入導線により成約率向上。顧客単価の増加を実現します。</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><i class="ti ti-share"></i></div>
+        <h3>コストパフォーマンスの最大化</h3>
+        <p>SNS拡散による認知度向上で、広告費に頼らない集客を実現します。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== CASES ===== -->
+  <div class="section">
+    <div class="sl">04 / Case Studies</div>
+    <h2>導入実績・成功事例</h2>
+    <p class="lead">実績豊富なインスタントウィン キャンペーンBOXで、あなたのECサイトも成功事例に。</p>
+    <div class="case-grid">
+      <div class="case-card">
+        <div class="case-type">大手アパレルEC</div>
+        <h3>CV率150%向上</h3>
+        <div class="case-metric"><span class="num">2.1%</span><span class="lbl">導入前</span></div>
+        <div class="case-metric"><span class="num">5.3%</span><span class="lbl">導入後</span></div>
+        <p>購入者限定の「インスタントウィン」施策により、リピート購入率が大幅に向上。SNS投稿も促進され、新規流入も増加。</p>
+      </div>
+      <div class="case-card">
+        <div class="case-type">食品系ECサイト</div>
+        <h3>カゴ落ち復活率2倍</h3>
+        <div class="case-metric"><span class="num">15.6%</span><span class="lbl">導入前</span></div>
+        <div class="case-metric"><span class="num">31.2%</span><span class="lbl">導入後</span></div>
+        <p>カゴ落ちユーザーに「特別クーポン抽選」を提案するメールを送付。「今だけ」の特別感が再訪問を促進。</p>
+      </div>
+      <div class="case-card">
+        <div class="case-type">家電・ガジェットEC</div>
+        <h3>新規会員320%UP</h3>
+        <div class="case-metric"><span class="num">850%↑</span><span class="lbl">SNS拡散</span></div>
+        <div class="case-metric"><span class="num">650%↑</span><span class="lbl">会員急増</span></div>
+        <p>紹介キャンペーンとインスタントウィンを組み合わせ、SNSでの話題化を促進。高額当選の期待感がバイラル拡散を生み出した。</p>
+      </div>
+    </div>
+    <div class="case-quote">
+      <p>「従来のポイント施策では得られなかった購買意欲の向上が見られました。特にお客様がSNSに投稿する機会が大幅に増え、オーガニックな拡散効果が生まれています。投資対効果は予想を上回るものでした。」</p>
+      <div class="who">A社 マーケティング部長</div>
+    </div>
+    <div class="case-timeline">
+      <i class="ti ti-clock"></i>
+      <p>効果が表れる期間：最短2週間で効果が表れはじめ、1ヶ月で顕著な成果に。（※サイト規模・業種により異なります）</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== PRICING ===== -->
+  <div class="section">
+    <div class="sl">05 / Pricing</div>
+    <h2>料金プラン</h2>
+    <p class="lead">スポット利用から大規模キャンペーンまで、規模に合わせて選べる3つのプランをご用意しています。</p>
+    <div class="pricing-grid">
+      <div class="pr-card">
+        <div class="pr-plan">スタートアップ向け</div>
+        <h3>従量課金プラン</h3>
+        <div class="pr-scene">小規模キャンペーンに最適</div>
+        <div class="pr-price">20円<span> / 1シリアル</span></div>
+        <div class="pr-sub">最小100件から利用可能（例：500件 = 10,000円）</div>
+        <ul class="pr-items">
+          <li><i class="ti ti-check"></i>必要な分だけ購入可能</li>
+          <li><i class="ti ti-check"></i>初期コスト最小化</li>
+          <li><i class="ti ti-check"></i>テスト利用にも◎</li>
+        </ul>
+      </div>
+      <div class="pr-card recommended">
+        <div class="pr-rec-badge">人気No.1</div>
+        <div class="pr-plan">PLAN</div>
+        <h3>スタンダードプラン</h3>
+        <div class="pr-scene">定期的なキャンペーンに最適</div>
+        <div class="pr-price">39,800円<span> / 月</span></div>
+        <div class="pr-sub">最大10,000件まで利用可・シリアル単価 実質3.98円</div>
+        <ul class="pr-items">
+          <li><i class="ti ti-check"></i>複数キャンペーンも可能</li>
+          <li><i class="ti ti-check"></i>専用サポート付き</li>
+          <li><i class="ti ti-check"></i>従量課金より80%以上お得</li>
+        </ul>
+      </div>
+      <div class="pr-card">
+        <div class="pr-plan">大規模向け</div>
+        <h3>プレミアムプラン</h3>
+        <div class="pr-scene">大規模キャンペーンに最適</div>
+        <div class="pr-price">99,800円<span> / 月</span></div>
+        <div class="pr-sub">最大50,000件まで利用可・シリアル単価 実質1.99円</div>
+        <ul class="pr-items">
+          <li><i class="ti ti-check"></i>無制限のキャンペーン作成</li>
+          <li><i class="ti ti-check"></i>優先サポート＆設定代行</li>
+          <li><i class="ti ti-check"></i>従量課金より90%以上お得</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pr-free">
+      <i class="ti ti-gift"></i>
+      <p><strong>初回特典：</strong>お申込み後すぐに <strong>1,000シリアル無料</strong> でお試しいただけます。</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== FLOW & SUPPORT ===== -->
+  <div class="section">
+    <div class="sl">06 / Flow &amp; Support</div>
+    <h2>導入フロー・サポート</h2>
+    <p class="lead">初回のキャンペーン設定は専任スタッフがサポート！最短即日でキャンペーンを始められます。</p>
+    <div class="flow-steps four">
+      <div class="fstep">
+        <div class="fstep-n">1</div>
+        <h4>お申し込み</h4>
+        <p>専用フォームから必要情報を入力するだけ。最短2分で完了します。</p>
+      </div>
+      <div class="fstep">
+        <div class="fstep-n">2</div>
+        <h4>ID/PASS発行</h4>
+        <p>申込完了後、自動返信メールで即日、専用管理画面へのアクセス情報をお送りします。最短30分でアクセス可能。</p>
+      </div>
+      <div class="fstep">
+        <div class="fstep-n">3</div>
+        <h4>管理画面設定</h4>
+        <p>直感的な管理画面で簡単設定。詳細なマニュアルもご提供します。</p>
+      </div>
+      <div class="fstep">
+        <div class="fstep-n">4</div>
+        <h4>キャンペーン開始</h4>
+        <p>設定完了後、最短即日からキャンペーンをスタート。リアルタイムで効果測定が可能です。</p>
+      </div>
+    </div>
+    <div class="support-grid">
+      <div class="support-card">
+        <i class="ti ti-headset"></i>
+        <h4>専用サポートデスク</h4>
+        <p>平日9:00〜18:00の専門スタッフによる丁寧なサポート対応</p>
+      </div>
+      <div class="support-card">
+        <i class="ti ti-help-circle"></i>
+        <h4>充実したFAQ</h4>
+        <p>よくあるご質問をまとめた専用ページで24時間いつでも解決</p>
+      </div>
+      <div class="support-card">
+        <i class="ti ti-presentation"></i>
+        <h4>オンライン説明会</h4>
+        <p>ご希望に応じて個別のオンライン説明会・操作サポートも実施</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ===== CONTACT FORM ===== -->
+  <div class="section" id="request-form">
+    <div class="sl">07 / Contact</div>
+    <h2>無料トライアル &amp; お問い合わせ</h2>
+    <p class="lead">まずは無料でお試しください！初回1,000シリアル無料、お申込み後すぐにご利用いただけます。必要情報：会社名、住所、電話番号、担当者名、代表者氏名、メールアドレス。お申し込み後、即日ID/PASSと管理画面URLをご案内します。</p>
+    <div class="form-wrap">
+      <h3>お問い合わせフォーム</h3>
+      <p class="form-sub">ご送信後、担当者より営業時間内（平日9:00〜18:00）にご連絡いたします。資料はメールにてお送りします。</p>
+      <div id="form-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>会社名 <span class="req">必須</span></label>
+            <input type="text" id="f-company" placeholder="例：株式会社サンプルEC">
+          </div>
+          <div class="form-group">
+            <label>ご住所</label>
+            <input type="text" id="f-address" placeholder="例：東京都〇〇区〇〇 1-2-3">
+          </div>
+          <div class="form-group">
+            <label>担当者名 <span class="req">必須</span></label>
+            <input type="text" id="f-name" placeholder="例：山田 太郎">
+          </div>
+          <div class="form-group">
+            <label>電話番号 <span class="req">必須</span></label>
+            <input type="tel" id="f-tel" placeholder="例：03-0000-0000">
+          </div>
+          <div class="form-group full">
+            <label>メールアドレス <span class="req">必須</span></label>
+            <input type="email" id="f-email" placeholder="例：yamada@example.co.jp">
+          </div>
+          <div class="form-group full">
+            <label>ご希望の対応 <span class="req">必須（1つ以上）</span></label>
+            <div class="check-row">
+              <label class="check-item"><input type="checkbox" id="c1"> サービス資料の送付を希望する</label>
+              <label class="check-item"><input type="checkbox" id="c2"> オンライン説明会を希望する</label>
+              <label class="check-item"><input type="checkbox" id="c3"> 概算お見積りを希望する</label>
+              <label class="check-item"><input type="checkbox" id="c4"> 無料トライアルを申し込む（初回1,000シリアル無料、即日スタート）</label>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>ご検討中のプラン</label>
+            <select id="f-plan">
+              <option value="">選択してください（任意）</option>
+              <option>従量課金プラン（20円/シリアル）</option>
+              <option>スタンダードプラン（39,800円/月）</option>
+              <option>プレミアムプラン（99,800円/月）</option>
+              <option>まだ決まっていない</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>ご質問・ご要望など</label>
+            <textarea id="f-note" placeholder="EC事業の規模・想定キャンペーン件数・実施時期などをご記入いただくと、よりスムーズにご提案できます。"></textarea>
+          </div>
+        </div>
+        <button class="form-submit" onclick="submitForm()">
+          <i class="ti ti-send"></i> 送信する
+        </button>
+        <p class="form-note">送信後、自動返信メールをお送りします。<br>ご入力いただいた個人情報は、資料送付・ご案内のご連絡にのみ使用し、第三者への提供は行いません。</p>
+      </div>
+      <div class="success-msg" id="success-msg">
+        <i class="ti ti-circle-check"></i>
+        <h4>送信が完了しました。ありがとうございます。</h4>
+        <p>担当者より営業時間内（平日9:00〜18:00）にご連絡いたします。<br>自動返信メールもあわせてご確認ください。<br>お急ぎの場合は <strong>03-5835-0443</strong> までご連絡ください。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FINAL CTA ===== -->
+  <div style="padding: 0 2.5rem" id="free-trial">
+    <div class="cta-block">
+      <div class="cta-label">Next Action</div>
+      <h2>今すぐスタート！<br>たった3ステップで最短即日。</h2>
+      <p>初回1,000シリアルは無料。お申込み後すぐにご利用いただけます。あなたのECサイトも、インスタントウィンキャンペーンBOXで成功事例に。</p>
+      <div class="cta-items">
+        <div class="cta-item">
+          <i class="ti ti-gift"></i>
+          <strong>無料トライアル</strong>
+          <p>初回1,000シリアル無料<br>申込み後すぐにお試し</p>
+        </div>
+        <div class="cta-item">
+          <i class="ti ti-phone"></i>
+          <strong>お電話</strong>
+          <p>03-5835-0443<br>平日9:00〜18:00</p>
+        </div>
+        <div class="cta-item">
+          <i class="ti ti-mail"></i>
+          <strong>メール</strong>
+          <p>campaignbox<br>@momentum-arc.jp</p>
+        </div>
+      </div>
+      <div class="cta-btns">
+        <a class="btn-white" href="#request-form">
+          <i class="ti ti-file-description"></i> 資料請求・お問い合わせ
+        </a>
+        <a class="btn-ghost" href="#request-form">
+          <i class="ti ti-gift"></i> 無料トライアルに申し込む
+        </a>
+      </div>
+      <div class="cta-contact">
+        <a href="mailto:campaignbox@momentum-arc.jp">campaignbox@momentum-arc.jp</a>｜<a href="http://ec.campainbox.momentum-arc.jp">ec.campainbox.momentum-arc.jp</a>｜Momentum Architect株式会社
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function submitForm() {
+  var company = document.getElementById('f-company').value.trim();
+  var name    = document.getElementById('f-name').value.trim();
+  var tel     = document.getElementById('f-tel').value.trim();
+  var email   = document.getElementById('f-email').value.trim();
+  var checks  = ['c1','c2','c3','c4'].map(function(id){ return document.getElementById(id).checked; });
+  var anyCheck = checks.some(Boolean);
+
+  if (!company || !name || !tel || !email || !anyCheck) {
+    alert('会社名・担当者名・電話番号・メールアドレス・ご希望の対応（1つ以上）は必須項目です。');
+    return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    alert('メールアドレスの形式をご確認ください。');
+    return;
+  }
+  document.getElementById('form-body').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
