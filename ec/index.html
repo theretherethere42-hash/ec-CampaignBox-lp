@@ -821,40 +821,40 @@
     <div class="form-wrap">
       <h3>お問い合わせフォーム</h3>
       <p class="form-sub">ご送信後、担当者より営業時間内（平日9:00〜18:00）にご連絡いたします。資料はメールにてお送りします。</p>
-      <div id="form-body">
+      <form id="form-body" action="https://formspree.io/f/xnjknega" method="POST">
         <div class="form-grid">
           <div class="form-group">
-            <label>会社名 <span class="req">必須</span></label>
-            <input type="text" id="f-company" placeholder="例：株式会社サンプルEC">
+            <label for="f-company">会社名 <span class="req">必須</span></label>
+            <input type="text" id="f-company" name="会社名" placeholder="例：株式会社サンプルEC" required>
           </div>
           <div class="form-group">
-            <label>ご住所</label>
-            <input type="text" id="f-address" placeholder="例：東京都〇〇区〇〇 1-2-3">
+            <label for="f-address">ご住所</label>
+            <input type="text" id="f-address" name="住所" placeholder="例：東京都〇〇区〇〇 1-2-3">
           </div>
           <div class="form-group">
-            <label>担当者名 <span class="req">必須</span></label>
-            <input type="text" id="f-name" placeholder="例：山田 太郎">
+            <label for="f-name">担当者名 <span class="req">必須</span></label>
+            <input type="text" id="f-name" name="担当者名" placeholder="例：山田 太郎" required>
           </div>
           <div class="form-group">
-            <label>電話番号 <span class="req">必須</span></label>
-            <input type="tel" id="f-tel" placeholder="例：03-0000-0000">
+            <label for="f-tel">電話番号 <span class="req">必須</span></label>
+            <input type="tel" id="f-tel" name="電話番号" placeholder="例：03-0000-0000" required>
           </div>
           <div class="form-group full">
-            <label>メールアドレス <span class="req">必須</span></label>
-            <input type="email" id="f-email" placeholder="例：yamada@example.co.jp">
+            <label for="f-email">メールアドレス <span class="req">必須</span></label>
+            <input type="email" id="f-email" name="_replyto" placeholder="例：yamada@example.co.jp" required>
           </div>
           <div class="form-group full">
             <label>ご希望の対応 <span class="req">必須（1つ以上）</span></label>
             <div class="check-row">
-              <label class="check-item"><input type="checkbox" id="c1"> サービス資料の送付を希望する</label>
-              <label class="check-item"><input type="checkbox" id="c2"> オンライン説明会を希望する</label>
-              <label class="check-item"><input type="checkbox" id="c3"> 概算お見積りを希望する</label>
-              <label class="check-item"><input type="checkbox" id="c4"> 無料トライアルを申し込む（初回1,000シリアル無料、即日スタート）</label>
+              <label class="check-item"><input type="checkbox" name="ご希望の対応[]" value="サービス資料の送付を希望する"> サービス資料の送付を希望する</label>
+              <label class="check-item"><input type="checkbox" name="ご希望の対応[]" value="オンライン説明会を希望する"> オンライン説明会を希望する</label>
+              <label class="check-item"><input type="checkbox" name="ご希望の対応[]" value="概算お見積りを希望する"> 概算お見積りを希望する</label>
+              <label class="check-item"><input type="checkbox" name="ご希望の対応[]" value="無料トライアルを申し込む"> 無料トライアルを申し込む（初回1,000シリアル無料、即日スタート）</label>
             </div>
           </div>
           <div class="form-group full">
-            <label>ご検討中のプラン</label>
-            <select id="f-plan">
+            <label for="f-plan">ご検討中のプラン</label>
+            <select id="f-plan" name="ご検討中のプラン">
               <option value="">選択してください（任意）</option>
               <option>従量課金プラン（20円/シリアル）</option>
               <option>スタンダードプラン（39,800円/月）</option>
@@ -863,20 +863,17 @@
             </select>
           </div>
           <div class="form-group full">
-            <label>ご質問・ご要望など</label>
-            <textarea id="f-note" placeholder="EC事業の規模・想定キャンペーン件数・実施時期などをご記入いただくと、よりスムーズにご提案できます。"></textarea>
+            <label for="f-note">ご質問・ご要望など</label>
+            <textarea id="f-note" name="ご質問・ご要望" placeholder="EC事業の規模・想定キャンペーン件数・実施時期などをご記入いただくと、よりスムーズにご提案できます。"></textarea>
           </div>
         </div>
-        <button class="form-submit" onclick="submitForm()">
+        <input type="hidden" name="_subject" value="【ECキャンペーンBOX】お問い合わせ">
+        <input type="hidden" name="_language" value="ja">
+        <button type="submit" class="form-submit">
           <i class="ti ti-send"></i> 送信する
         </button>
         <p class="form-note">送信後、自動返信メールをお送りします。<br>ご入力いただいた個人情報は、資料送付・ご案内のご連絡にのみ使用し、第三者への提供は行いません。</p>
-      </div>
-      <div class="success-msg" id="success-msg">
-        <i class="ti ti-circle-check"></i>
-        <h4>送信が完了しました。ありがとうございます。</h4>
-        <p>担当者より営業時間内（平日9:00〜18:00）にご連絡いたします。<br>自動返信メールもあわせてご確認ください。<br>お急ぎの場合は <strong>03-5835-0443</strong> までご連絡ください。</p>
-      </div>
+      </form>
     </div>
   </div>
 
@@ -919,27 +916,6 @@
 
 </div>
 
-<script>
-function submitForm() {
-  var company = document.getElementById('f-company').value.trim();
-  var name    = document.getElementById('f-name').value.trim();
-  var tel     = document.getElementById('f-tel').value.trim();
-  var email   = document.getElementById('f-email').value.trim();
-  var checks  = ['c1','c2','c3','c4'].map(function(id){ return document.getElementById(id).checked; });
-  var anyCheck = checks.some(Boolean);
-
-  if (!company || !name || !tel || !email || !anyCheck) {
-    alert('会社名・担当者名・電話番号・メールアドレス・ご希望の対応（1つ以上）は必須項目です。');
-    return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    alert('メールアドレスの形式をご確認ください。');
-    return;
-  }
-  document.getElementById('form-body').style.display = 'none';
-  document.getElementById('success-msg').style.display = 'block';
-}
-</script>
 
 </body>
 </html>
